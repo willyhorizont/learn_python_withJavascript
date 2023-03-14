@@ -71,6 +71,30 @@
 # distance = list(map(map_callback_2, graph))
 # print('distance', distance)
 
-from math import inf
+# from math import inf
 
-print('inf', inf)
+# print('inf', inf)
+
+# edges = { 'B': 4, 'C': 2 }
+
+# for edge in edges:
+#     print(edges[edge])
+
+# graph = {
+#     'A': { 'B': 4, 'C': 2 },
+#     'B': { 'A': 4, 'C': 1, 'D': 5 },
+#     'C': { 'A': 2, 'B': 1, 'D': 8, 'E': 10 },
+#     'D': { 'B': 5, 'C': 8, 'E': 2 },
+#     'E': { 'C': 10, 'D': 2 }
+# }
+
+# startVertex = [gh for gh in graph]
+# # print(startVertex)
+
+MST = set()
+print(MST)
+MST.add('A')
+print(MST)
+
+# MST = {}
+# MST.add
