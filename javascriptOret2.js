@@ -31,7 +31,23 @@
 // console.log('firstElement', firstElement);
 // console.log('array1', array1);
 
-let i = 0
-console.log('i', i);
-i += 1
-console.log('i', i);
+// let i = 0
+// console.log('i', i);
+// i += 1
+// console.log('i', i);
+
+// const graph = [
+//     [0, 3, Infinity, 5],
+//     [2, 0, Infinity, 4],
+//     [Infinity, 1, 0, Infinity],
+//     [Infinity, Infinity, 2, 0]
+// ];
+
+// const distance = [...graph];
+
+// console.log('distance', distance);
+
+[...Array(10).keys()].forEach((i) => {
+    console.log('i', i);
+});
+

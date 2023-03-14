@@ -45,10 +45,32 @@
 # shortest_distance_node(distances, visited)
 
 
-array1 = [1, 2, 3]
-print('array1', array1)
+# array1 = [1, 2, 3]
+# print('array1', array1)
 
-first_element = array1.pop(0)
+# first_element = array1.pop(0)
 
-print('first_element', first_element)
-print('array1', array1)
+# print('first_element', first_element)
+# print('array1', array1)
+
+# import math
+
+# graph = [
+#     [0, 3, math.inf, 5],
+#     [2, 0, math.inf, 4],
+#     [math.inf, 1, 0, math.inf],
+#     [math.inf, math.inf, 2, 0]
+# ]
+
+# def map_callback_1(j):
+#     return j
+# def map_callback_2(i):
+#     return list(map(map_callback_1, i))
+    
+# # distance = list(map(lambda i: list(map(lambda j: j, i)), gh))
+# distance = list(map(map_callback_2, graph))
+# print('distance', distance)
+
+from math import inf
+
+print('inf', inf)
