@@ -37,13 +37,13 @@ const findShortestPath = (graph, startNode, endNode) => {
             if (String(child) === String(startNode)) continue;
 
             // save the distance from the start node to the child node
-            const newdistance = distance + children?.[child];
+            const newDistance = distance + children?.[child];
             // if there's no recorded distance from the start node to the child node in the distances object
             // or if the recorded distance is shorter than the previously stored distance from the start node to the child node
             // save the distance to the object
             // record the path
-            if (distances?.[child] === undefined || distances?.[child] > newdistance) {
-                distances[child] = newdistance;
+            if (distances?.[child] === undefined || distances?.[child] > newDistance) {
+                distances[child] = newDistance;
                 parents[child] = node;
             }
         }

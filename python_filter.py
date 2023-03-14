@@ -10,8 +10,7 @@ products = [
 labeled_products = list(filter(lambda product: product['price'] <= 100, products))
 print('output:', labeled_products)
 
-# output =
-# [
+# output: [
     # {'id': 'id_1', 'price': 30},
     # {'id': 'id_3', 'price': 5},
 # ]

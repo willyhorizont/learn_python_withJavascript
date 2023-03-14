@@ -12,4 +12,5 @@ const generateFibonacciUntil = (stopper = 5) => {
     return fibonacci;
 };
 
-console.log(JSON.stringify(generateFibonacciUntil(40)).split(',').join(', '));
+console.log('output:', JSON.stringify(generateFibonacciUntil(10)).split(',').join(', '));
+// output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
