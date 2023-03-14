@@ -23,10 +23,15 @@
 // visited [ 'C', 'B', 'D', 'E' ]
 // shortest null
 
-const array1 = [1, 2, 3];
-console.log('array1', array1);
+// const array1 = [1, 2, 3];
+// console.log('array1', array1);
 
-const firstElement = array1.shift();
+// const firstElement = array1.shift();
 
-console.log('firstElement', firstElement);
-console.log('array1', array1);
+// console.log('firstElement', firstElement);
+// console.log('array1', array1);
+
+let i = 0
+console.log('i', i);
+i += 1
+console.log('i', i);
