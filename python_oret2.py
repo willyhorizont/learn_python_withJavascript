@@ -25,22 +25,30 @@
 
 # print(obyek.get('e'))
 
-import math
+# import math
 
-def shortest_distance_node(distances, visited):
-    shortest = None
+# def shortest_distance_node(distances, visited):
+#     shortest = None
 
-    print('distances', distances)
-    print('visited', visited)
-    for node in distances:
-        # const currentIsShortest = shortest === null || distances[node] < distances[shortest];
-        currentIsShortest = shortest is None or (distances.get(shortest) is not None and distances.get(node) is not None and distances.get(node) < distances.get(shortest))
-        if currentIsShortest or node not in visited:
-            shortest = node
-    print('shortest', shortest)
-    return shortest
+#     print('distances', distances)
+#     print('visited', visited)
+#     for node in distances:
+#         # const currentIsShortest = shortest === null || distances[node] < distances[shortest]
+#         currentIsShortest = shortest is None or (distances.get(shortest) is not None and distances.get(node) is not None and distances.get(node) < distances.get(shortest))
+#         if currentIsShortest or node not in visited:
+#             shortest = node
+#     print('shortest', shortest)
+#     return shortest
 
-visited = []
-distances = { 'E': math.inf, 'B': 4, 'C': 2 }
-shortest_distance_node(distances, visited)
+# visited = []
+# distances = { 'E': math.inf, 'B': 4, 'C': 2 }
+# shortest_distance_node(distances, visited)
 
+
+array1 = [1, 2, 3]
+print('array1', array1)
+
+first_element = array1.pop(0)
+
+print('first_element', first_element)
+print('array1', array1)

@@ -4,21 +4,29 @@
 //   console.log(property)
 // }
 
-let visited = []
-let distances = {}
-let shortest = null
-distances { E: Infinity, B: 4, C: 2 }
-visited []
-shortest C
-distances { E: 7, B: 3, C: 2, D: 6 }
-visited [ 'C' ]
-shortest B
-distances { E: 6, B: 3, C: 2, D: 5 }
-visited [ 'C', 'B' ]
-shortest D
-distances { E: 6, B: 3, C: 2, D: 5 }
-visited [ 'C', 'B', 'D' ]
-shortest E
-distances { E: 6, B: 3, C: 2, D: 5 }
-visited [ 'C', 'B', 'D', 'E' ]
-shortest null
+// let visited = []
+// let distances = {}
+// let shortest = null
+// distances { E: Infinity, B: 4, C: 2 }
+// visited []
+// shortest C
+// distances { E: 7, B: 3, C: 2, D: 6 }
+// visited [ 'C' ]
+// shortest B
+// distances { E: 6, B: 3, C: 2, D: 5 }
+// visited [ 'C', 'B' ]
+// shortest D
+// distances { E: 6, B: 3, C: 2, D: 5 }
+// visited [ 'C', 'B', 'D' ]
+// shortest E
+// distances { E: 6, B: 3, C: 2, D: 5 }
+// visited [ 'C', 'B', 'D', 'E' ]
+// shortest null
+
+const array1 = [1, 2, 3];
+console.log('array1', array1);
+
+const firstElement = array1.shift();
+
+console.log('firstElement', firstElement);
+console.log('array1', array1);
