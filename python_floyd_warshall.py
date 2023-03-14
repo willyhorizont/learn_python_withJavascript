@@ -3,6 +3,13 @@ import math
 n_vertices = 4
 
 
+def print_solution(distance):
+    for i in range(n_vertices):
+        for j in range(n_vertices):
+            print(distance[i][j], end='  ')
+        print(' ')
+
+
 def floyd_warshall(gh):
     distance = list(map(lambda i: list(map(lambda j: j, i)), gh))
 
@@ -12,13 +19,6 @@ def floyd_warshall(gh):
             for j in range(n_vertices):
                 distance[i][j] = min(distance[i][j], distance[i][k] + distance[k][j])
     print_solution(distance)
-
-
-def print_solution(distance):
-    for i in range(n_vertices):
-        for j in range(n_vertices):
-            print(distance[i][j], end='  ')
-        print(' ')
 
 
 graph = [
