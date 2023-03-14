@@ -1,25 +1,26 @@
 import math
 
+
 def shortest_distance_node(distances, visited):
     shortest = None
 
     for node in distances:
-        currentIsShortest = shortest is None or (distances.get(shortest) is not None and distances.get(node) is not None and distances.get(node) < distances.get(shortest))
-        if currentIsShortest and node not in visited:
+        current_is_shortest = shortest is None or (distances.get(shortest) is not None and distances.get(node) is not None and distances.get(node) < distances.get(shortest))
+        if current_is_shortest and node not in visited:
             shortest = node
     return shortest
 
 
-def find_shortest_path(graph, startNode, endNode):
+def find_shortest_path(graph, start_node, end_node):
     # establish object for recording distances from the start node
     distances = {}
-    distances[endNode] = math.inf
-    distances = {**distances, **graph.get(startNode)}
+    distances[end_node] = math.inf
+    distances = {**distances, **graph.get(start_node)}
 
     # track paths
-    parents = {'endNode': None}
-    for child in graph.get(startNode):
-        parents[child] = startNode
+    parents = {'end_node': None}
+    for child in graph.get(start_node):
+        parents[child] = start_node
 
     # track nodes that have already been visited
     visited = []
@@ -35,16 +36,16 @@ def find_shortest_path(graph, startNode, endNode):
         # for each of those child nodes
         for child in children:
             # make sure each child node is not the start node
-            if str(child) == str(startNode):
+            if str(child) == str(start_node):
                 continue
             # save the distance from the start node to the child node
-            newdistance = distance + children.get(child)
+            new_distance = distance + children.get(child)
             # if there's no recorded distance from the start node to the child node in the distances object
             # or if the recorded distance is shorter than the previously stored distance from the start node to the child node
             # save the distance to the object
             # record the path
-            if distances.get(child) is None or (distances.get(child) is not None and distances.get(child) > newdistance):
-                distances[child] = newdistance
+            if distances.get(child) is None or (distances.get(child) is not None and distances.get(child) > new_distance):
+                distances[child] = new_distance
                 parents[child] = node
         # move the node to the visited set
         visited = [*visited, node]
@@ -53,20 +54,20 @@ def find_shortest_path(graph, startNode, endNode):
 
     # using the stored paths from start node to end node
     # record the shortest path
-    shortestPath = [endNode]
-    parent = parents.get(endNode)
+    shortest_path = [end_node]
+    parent = parents.get(end_node)
     while parent:
-        shortestPath = [*shortestPath, parent]
+        shortest_path = [*shortest_path, parent]
         parent = parents.get(parent)
 
-    shortestPathCopy = [*shortestPath]
-    shortestPathCopy.reverse()
-    shortestPath = shortestPathCopy
+    shortest_path_copy = [*shortest_path]
+    shortest_path_copy.reverse()
+    shortest_path = shortest_path_copy
 
     # return the shortest path from start node to end node & its distance
     results = {
-        'distance': distances.get(endNode),
-        'path': shortestPath,
+        'distance': distances.get(end_node),
+        'path': shortest_path,
     }
 
     return results
