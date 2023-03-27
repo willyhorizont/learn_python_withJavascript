@@ -1,0 +1,4 @@
+K Nearest Neighbors
+A*
+B*
+Depth First Search
